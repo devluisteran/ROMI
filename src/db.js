@@ -12,7 +12,7 @@ const db = new sqlite3.Database('./database.sqlite', (err) => {
       name TEXT,
       age INTEGER,
       symptoms TEXT,
-      creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )`);
   }
 });
