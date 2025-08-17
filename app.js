@@ -1,8 +1,9 @@
-const express = require('express')
-const routerPatients = require("./src/routes/Patients.routes");
+import express from 'express';
+import routerPatients from './src/routes/Patients.routes.js';
 
-const app = express()
-const port = 3000
+
+const app = express();
+const port = 3000;
 app.use(express.json());
 app.use("/api/patients",routerPatients);
 

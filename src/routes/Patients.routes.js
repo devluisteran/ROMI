@@ -1,10 +1,10 @@
-const express = require('express');
+import { Router } from 'express';
 //import registerPatient from "../controllers/Patients.controller";
-const patientsController = require("../controllers/Patients.controller");
-const app = express();
 
-const routerPatients = express.Router();
-routerPatients.get("/patients", patientsController.getPatients);
-routerPatients.post('/register', patientsController.registerPatient);
+import {getPatients,registerPatient} from "../controllers/Patients.controller.js";
+const routerPatients = Router();
 
-module.exports = routerPatients;
+routerPatients.get("/patients", getPatients);
+routerPatients.post('/register', registerPatient);
+
+export default routerPatients;

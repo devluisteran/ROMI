@@ -1,4 +1,5 @@
-const sqlite3 = require('sqlite3').verbose();
+import sqlite3 from 'sqlite3';
+// const sqlite3 = require('sqlite3').verbose();
 
 // Conectar a la base de datos (se crea automáticamente si no existe)
 const db = new sqlite3.Database('./database.sqlite', (err) => {
@@ -17,4 +18,4 @@ const db = new sqlite3.Database('./database.sqlite', (err) => {
   }
 });
 
-module.exports = db;
+export default db;
