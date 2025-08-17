@@ -1,0 +1,23 @@
+{
+  "name": "romi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devluisteran/sintomas-paciente.git"
+  },
+  "author": "devteran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devluisteran/sintomas-paciente/issues"
+  },
+  "homepage": "https://github.com/devluisteran/sintomas-paciente#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}
