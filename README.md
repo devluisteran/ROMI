@@ -44,8 +44,11 @@ Body request (JSON):
 }
 
 Response (JSON):
+
 {
+    
     "status": 201,
+    
     "message": "Patient registered successfully"
 }
 
@@ -56,7 +59,9 @@ GET /api/patients/patients
 Descripción: Devuelve todos los pacientes almacenados.
 
 Response (JSON)
+
 {
+
     "status": 200,
     "message": "Patients retrieved successfully",
     "data": [
