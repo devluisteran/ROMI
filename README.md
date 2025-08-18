@@ -76,8 +76,11 @@ Response (JSON)
 }
 
 📂 Estructura del proyecto
+
 .
+
 ├──src
+
     ├──controllers
       └──Patients.controller.js
     ├──models
@@ -85,6 +88,6 @@ Response (JSON)
     ├──routes
       └──Patients.routes.js
     ├── db.js  
-├── index.js        # Archivo principal (servidor Express)
+├── app.js        # Archivo principal (servidor Express)
 ├── package.json    # Configuración del proyecto y dependencias
 └── README.md       # Documentación
