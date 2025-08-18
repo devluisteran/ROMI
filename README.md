@@ -33,9 +33,13 @@ POST /api/patients/register
 Descripción: Permite agregar un nuevo paciente al sistema.
 
 Body request (JSON):
+
 {
+
     "name":"Juan", #string, nombre el paciente obligatorio
+    
     "age":27,      #number, edad del paciente
+    
     "symptoms":"Dolor de Cabeza" #string, descripcion de sintomas del paciente
 }
 
