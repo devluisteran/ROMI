@@ -24,6 +24,11 @@ export const registerPatientModel = async (patientData) => {
 };
 
 export const getPatientsModel = async () => {
-    const patients = await db.all('SELECT * FROM patients');
-    return patients;
+     try {
+        const patients = await db.all('SELECT * FROM patients');
+        return patients;
+    } catch (error) {
+        console.error('Error in getPatientsModel:', error);
+        throw error; // Propaga el error para manejarlo en el controlador
+    }
 };

@@ -34,7 +34,6 @@ export const getPatients = async(req, res)=>{
 
     try {
         const patients = await getPatientsModel();
-
         if (!patients) {
             return res.status(404).json({
                 status: 404,

@@ -1,21 +1,30 @@
 import sqlite3 from 'sqlite3';
-// const sqlite3 = require('sqlite3').verbose();
+import { open } from 'sqlite';
 
-// Conectar a la base de datos (se crea automáticamente si no existe)
-const db = new sqlite3.Database('./database.sqlite', (err) => {
-  if (err) {
-    console.error('Error al conectar con la base de datos', err);
-  } else {
-    console.log('Conectado a la base de datos SQLite');
-    // Crear tablas si no existen
-    db.run(`CREATE TABLE IF NOT EXISTS patients (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name TEXT,
-      age INTEGER,
-      symptoms TEXT,
-      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    )`);
-  }
+// Configuración correcta usando el wrapper 'sqlite'
+export const db = await open({
+    filename: './database.sqlite',
+    driver: sqlite3.Database
 });
+
+// Verificar conexión y crear tablas
+async function initializeDatabase() {
+    try {
+        await db.exec(`CREATE TABLE IF NOT EXISTS patients (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT,
+            age INTEGER,
+            symptoms TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )`);
+        console.log('Conexión exitosa y tabla patients verificada');
+    } catch (error) {
+        console.error('Error al inicializar la base de datos:', error);
+        throw error;
+    }
+}
+
+// Inicializar la base de datos
+await initializeDatabase();
 
 export default db;
