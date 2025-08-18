@@ -88,6 +88,9 @@ Response (JSON)
     ├──routes
       └──Patients.routes.js
     ├── db.js  
+    
 ├── app.js        # Archivo principal (servidor Express)
+
 ├── package.json    # Configuración del proyecto y dependencias
+
 └── README.md       # Documentación
