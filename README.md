@@ -25,6 +25,7 @@ El servidor se ejecutará por defecto en:
 👉 http://localhost:3000
 
 📡 Endpoints disponibles
+
 1️⃣ Registrar un paciente
 
 POST /api/patients/register
